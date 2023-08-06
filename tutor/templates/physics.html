@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends 'nav.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static%}
+    <title>{% block page-title %}Physics{% endblock %}</title>
+</head>
+
+{% block bodytag %}<body class="physicspage">{%endblock%}
+    <header>
+        {% block navbar %}
+        {{block.super}}
+        {% endblock %}
+    </header>
+    {% block content %}
+    <span class="title-container" style="padding-top: 120px;">
+        <h1 style="color: #ffffff; font-size: 75px;">Physics (GCSE & A Level)</h1>
+    </span>
+    <div style="padding-top: 120px; padding-bottom: 120px;">
+        <section class="text" style="transform: rotate(1deg);">
+            <p style="transform: rotate(-1deg);">
+                <span style="font-size: x-large;">Developing a deeper understanding of the Universe with Physics</span><br><br>
+
+            </p>
+            <p style="transform: rotate(-1deg);">We foster a deep appreciation for Physics, encouraging students to
+                explore the wonders of the universe and its underlying principles.</p>
+
+            <p style="transform: rotate(-1deg);">
+                At TheMaidenheadTutor, we go beyond the confines of GCSE and A-Level syllabus. We are passionate
+                about preparing students for higher-level Physics challenges and nurturing critical thinking skills. Our
+                Physics tutoring services focus on the following aspects to provide a comprehensive understanding of the
+                subject:
+            </p>
+            <ul class="custom-list" style="transform: rotate(-1deg);">
+                <li>
+                    <b>Conceptual Understanding and Advanced Topics:</b> <br>We delve into complex Physics topics beyond
+                    the school curriculum. By introducing advanced concepts, we stimulate intellectual curiosity and
+                    broaden students' perspectives on the subject. Our tutors are well-versed in university-level
+                    Physics,
+                    enabling them to guide students in exploring more profound and abstract scientific ideas.
+                </li>
+                <li>
+                    <b>Problem-Solving Skills and Applied Physics:</b> <br>
+                    Our tutoring approach emphasizes problem-solving skills, encouraging students to tackle challenging
+                    Physics problems with confidence and creativity. We explore applications of Physics in various
+                    fields. By relating Physics to real-world scenarios, we
+                    deepen students' appreciation for its practical applications.
+                </li>
+                <li>
+                    <b>Experimental and Analytical Thinking:</b><br> We focus on developing analytical thinking skills
+                    through practical experiments and logical reasoning. Students learn to analyze data and draw
+                    conclusions from experiments, fostering a deeper understanding of Physics principles.
+                </li>
+            </ul>
+        </section>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'nav.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{% block page-title %}About Us{% endblock %}</title>
+</head>
+
+{% block bodytag %}
+
+<body class="homepage">{%endblock%}
+    <header>
+        {% block navbar %}
+        {{block.super}}
+        {% endblock %}
+    </header>
+    {% block content %}
+    <div class="body-container">
+        <div class="flex-lg-column">
+            <div class="aboutus-card">
+                <h1>About Us</h1>
+                <div style="width: 110%;">
+                    <p>Welcome to The Maidenhead Tutor, a tutoring service specializing in GCSE and A-level Maths and
+                        Physics. Our mission is to help students achieve their full potential in these challenging
+                        subjects.
+                    </p><br>
+                    <p style="font-size: xx-large;">Founder:</p>
+                    <p>
+                        I am Mansimran and I recently graduated in Physics and I have about 2 years of experience in
+                        tutoring. I am passionate about helping students understand complex concepts and achieve their
+                        academic goals.
+                    </p><br>
+                    <p>
+                        The Maidenhead Tutor is a recently launched business, and we are excited to help students in the
+                        Maidenhead area achieve their academic goals. If you are interested in our services, please
+                        don’t
+                        hesitate to contact us.<br>
+                        We charge <b>£30/hr</b> for all maths and science subjects, we shall be introducing language learning soon.
+                    </p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% extends 'nav.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport 5" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{%block page-title%}Reviews{%endblock%}</title>
+    {% load mathfilters %}
+</head>
+
+{% block bodytag %}
+
+<body class="reviewspage">{%endblock%}
+    <header>
+        {% block navbar%}
+        {{block.super}}
+        {% endblock %}
+    </header>
+    {% block content %}
+    <section class="no-parallax">
+        <div class="container" style="position: absolute; top: 90px; left: 0px;">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle .active" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="dropdownText">Filter by Rating</span>
+                </button>{% csrf_token %}
+                <div class="dropdown-menu .active" aria-labelledby="dropdownMenuButton">
+                    <button type="button" class="dropdown-item" onclick="filterReviews('all')">All</button>
+                    <button type="button" class="dropdown-item" onclick="filterReviews('5')">5 Stars</button>
+                    <button type="button" class="dropdown-item" onclick="filterReviews('4')">4 Stars</button>
+                    <button type="button" class="dropdown-item" onclick="filterReviews('3')">3 Stars</button>
+                    <button type="button" class="dropdown-item" onclick="filterReviews('2')">2 Stars</button>
+                    <button type="button" class="dropdown-item" onclick="filterReviews('1')">1 Stars</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <ul id="filterList" style="list-style-type: none;">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax"></section>
+    <section class="no-parallax">
+        <div class="container d-flex justify-content-center align-items-center">
+            <form method="POST" class="form" style="background: rgba(46,74,102, 0.7); border-radius: 24px;">
+                {% csrf_token %}
+
+                <ul style="list-style-type: none;">
+                    <li style="display: flex; justify-content: center;">
+                        <h1><span style="color: #ffffff;">Leave a Review</span></h1>
+                    </li>
+                    <br>
+                    <li>
+                        <div class="rating">
+                            {% for value, label in form.stars.field.widget.choices %}
+                            {% with reversed_value=6|sub:value %}
+                            <input value="{{ reversed_value }}" name="{{ form.stars.html_name }}"
+                                id="star-{{ reversed_value }}" type="radio" {% if form.stars.value == reversed_value %}checked{% endif %}>
+                            <label for="star-{{ reversed_value }}">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                                        pathLength="360"></path>
+                                </svg>
+                            </label>
+                            {% endwith %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <li>
+                        <label for="firstname"><span style="color: #ffffff;">First Name:</span></label>
+                        {{ form.firstname }}
+                    </li>
+                    <li>
+                        <label for="lastname"><span style="color: #ffffff;">Last Name:</span></label>
+                        {{ form.lastname }}
+                    </li>
+                    <li>
+                        <label for="description"><span style="color: #ffffff;">Description:</span></label>
+                        {{ form.description }}
+                    </li>
+                </ul>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+
+</html>

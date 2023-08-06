@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends 'nav.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{% block page-title %}Home{% endblock %}</title>
+</head>
+
+{% block bodytag %}<body class="homepage">{%endblock%}
+    <header>
+        {% block navbar %}
+        {{block.super}}
+        {% endblock %}
+    </header>
+    {% block content %}
+    <div style="padding-top: 120px;">
+        <section class="text">
+            <h1>Our Unique Approach to Tutoring</h1>
+            <p>
+                Are you worried about your academic performance in Maths or Physics? Look no further! Consider
+                using an experienced online personal tutor with a strong background in physics and mathematics. With over 350+ lessons taught
+                and an impressive 4.9-star rating, We are dedicated to helping every child succeed.
+            </p>
+            <h5>What sets us apart:</h5>
+            <ul class="custom-list">
+                <li>
+                    <b>Remote Convenience:</b> Our tutoring sessions are conducted entirely online, allowing your child to
+                    learn from the comfort of home, eliminating the need for travel.
+                </li>
+                <li>
+                    <b>Specialization in Physics and Maths:</b> My physics degree enables me to offer a unique and comprehensive approach
+                    to teaching, making complex concepts easier to understand.
+
+                </li>
+                <li>
+                    <b>Exceptional Results:</b> Most of my students have seen an average improvement of three grades, thanks to
+                    my in-depth teaching methods.
+
+                </li>
+            </ul>
+            <p>
+                <br>
+                Discover how your child's confidence and grades can soar under my guidance. Contact me today to schedule
+                a  session!
+
+            </p>
+        </section>
+        <section class="image image-2"></section>
+        <section class="text">
+            <h1>Tailored Learning</h1>
+            <p>
+                We understand that every student learns differently, which is why our approach is tailored to meet your
+                child's unique needs and learning style. Through personalized lesson plans and one-on-one attention, we
+                empower students to grasp challenging concepts, build a strong foundation, and excel in their academic
+                pursuits.
+            </p>
+            <p>
+                As a result, your child will not only excel in Maths and Physics but also develop invaluable critical
+                thinking and problem-solving skills. Witness the joy of their achievements as their confidence soars and
+                their passion for learning ignites.
+            </p>
+            <p>
+                Seeing our students thrive academically is our greatest reward. As they overcome obstacles and achieve
+                higher grades, their confidence soars, positively impacting all aspects of their lives. With a
+                supportive and encouraging learning environment, we instill a sense of accomplishment that fuels their
+                passion for learning.
+            </p>
+        </section>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    {% endblock %}
+</body>
+
+</html>

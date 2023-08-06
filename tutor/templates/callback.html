@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends 'nav.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport 5" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{%block page-title%}Request a Callback{%endblock%}</title>
+</head>
+
+{% block bodytag %}<body class="homepage">{%endblock%}
+    <header>
+        {% block navbar%}
+        {{block.super}}
+        {% endblock %}
+    </header>
+    {% block content %}
+    <section class="no-parallax">
+        <div class="container d-flex justify-content-center align-items-center">
+            <form method="POST" class="form" style="background: rgba(46, 74, 102, 0.74); border-radius: 24px;">
+                {% csrf_token %}
+
+                <ul style="list-style-type: none;">
+                    <li style="display: flex; justify-content: center;">
+                        <h1><span style="color: #ffffff;">Request a Callack</span></h1>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="email"><span style="color: #ffffff;">Email:</span></label>
+                        {{ form.email }}
+                    </li><br>
+                    <li>
+                        <label for="number"><span style="color: #ffffff;">Phone Number:</span></label>
+                        {{ form.number }}
+                    </li><br>
+                    <li>
+                        <label for="message"><span style="color: #ffffff;">Message:</span></label>
+                        {{ form.message }}
+                    </li>
+                </ul>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+
+</html>

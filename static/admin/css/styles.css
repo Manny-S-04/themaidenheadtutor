@@ -1,0 +1,79 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* Example styles for form fields */
+#id_firstname,
+#id_lastname,
+#id_description {
+    /* Add your custom CSS styles here */
+    /* For example: */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.mathspage{
+    background-image: url("https://cdn.discordapp.com/attachments/714968085223702610/1135280586739679363/OIG.png") !important;
+    margin: 0;
+    font-family: "Euclid Circular A";
+    /*background: #181717 linear-gradient(60deg, #ffffff, #776a6a);*/
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgba(255, 255, 255, 0.7);
+    overflow-x: hidden;
+}
+.physicspage{
+    background-image: url("https://cdn.discordapp.com/attachments/714968085223702610/1135217384572072120/OIG.png") !important;
+    margin: 0;
+    font-family: "Euclid Circular A";
+    /*background: #181717 linear-gradient(60deg, #ffffff, #776a6a);*/
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgba(255, 255, 255, 0.7);
+    overflow-x: hidden;
+}
+.homepage{
+    background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1600") !important;
+    margin: 0;
+    font-family: "Euclid Circular A";
+    /*background: #181717 linear-gradient(60deg, #ffffff, #776a6a);*/
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgba(255, 255, 255, 0.7);
+    overflow-x: hidden;
+}
+.reviewspage{
+    background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1600") !important;
+    margin: 0;
+    font-family: "Euclid Circular A";
+    /*background: #181717 linear-gradient(60deg, #ffffff, #776a6a);*/
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgba(255, 255, 255, 0.7);
+    overflow-x: hidden;
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: auto;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'nav.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static%}
+    <title>{% block page-title %}Maths{% endblock %}</title>
+</head>
+
+{% block bodytag %}<body class="mathspage">{%endblock%}    <header>
+        {% block navbar %}
+        {{block.super}}
+        {% endblock %}
+    </header>
+    {% block content %}
+    <span class="title-container" style="padding-top: 120px;">
+        <h1 style="color: #ffffff; font-size: 75px;">Mathematics (GCSE & A Level)</h1>
+    </span>
+    <div style="padding-top: 120px; padding-bottom: 120px;">
+        <section class="text" style="transform: rotate(1deg);">
+            <p style="transform: rotate(-1deg);">
+                <span style="font-size: x-large;">Developing Critical Thinking and
+                    University-Level Understanding</span><br><br>
+            </p>
+            <p style="transform: rotate(-1deg);">We instill a growth mindset, encouraging students to embrace challenges
+                and view mistakes as
+                opportunities for learning and improvement.
+            </p>
+            <p style="transform: rotate(-1deg);">
+                At TheMaidenheadTutor, we go beyond the confines of GCSE and A-Level syllabus. We are
+                passionate about preparing students for higher-level mathematical challenges and nurturing critical
+                thinking skills. Our mathematics tutoring services focus on the following aspects to provide a
+                comprehensive understanding of the subject:
+            </p>
+            <ul class="custom-list" style="transform: rotate(-1deg);">
+                <li>
+                    <b>Conceptual Understanding and University-Level Topics:</b> <br>We delve into advanced mathematical
+                    topics beyond the school curriculum. By introducing university-level
+                    concepts, we stimulate intellectual curiosity and broaden students' perspectives on the subject.
+                    Our tutors are well-versed in university-level mathematics, enabling them to guide students in
+                    exploring
+                    more complex and abstract mathematical ideas.
+                </li>
+                <li>
+                    <b>Problem-Solving Skills and Applied Mathematics:</b> <br>
+                    Our tutoring approach emphasizes problem-solving skills, encouraging students to tackle challenging
+                    mathematical problems with confidence and creativity.
+                    We explore applications of mathematics in various fields, including sciences, engineering,
+                    economics,
+                    and more. By relating math to real-world scenarios, we deepen students' appreciation for its
+                    practical
+                    applications.
+                </li>
+                <li>
+                    <b>Analytical Thinking and Mathematical Proofs:</b><br> We focus on developing analytical thinking
+                    skills and logical reasoning. Students learn to construct
+                    mathematical proofs, and derive equations, fostering a deeper understanding of mathematical
+                    principles.
+                </li>
+            </ul>
+        </section>
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>
