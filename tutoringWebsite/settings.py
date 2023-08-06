@@ -85,14 +85,13 @@ WSGI_APPLICATION = 'tutoringWebsite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'tutor',
-        'USER': 'bruno',
-        'PASSWORD': 'bruno',
-        'HOST': 'localhost',
+        'NAME': 'denknll25063av',
+        'USER': 'jgiezgourieazh',
+        'PASSWORD': '919ab2bc8abc6e1a17687fc54b997c5d2a64fdb7373410b3c25bd07fc3dfa4c5',
+        'HOST': 'ec2-3-92-151-217.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
