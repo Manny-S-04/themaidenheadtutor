@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'tutoringWebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'denknll25063av',
-        'USER': 'jgiezgourieazh',
-        'PASSWORD': '919ab2bc8abc6e1a17687fc54b997c5d2a64fdb7373410b3c25bd07fc3dfa4c5',
+        'NAME': 'dv3c4qfq076tc',
+        'USER': 'txzdrmcxdccgru',
+        'PASSWORD': '78bd00742c35018ef62a4cd05b6619e5d9adf951d6ad3e5204d5ba55947c116d',
         'HOST': 'ec2-3-92-151-217.compute-1.amazonaws.com',
         'PORT': '5432',
     }
