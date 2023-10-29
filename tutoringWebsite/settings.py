@@ -87,12 +87,8 @@ WSGI_APPLICATION = 'tutoringWebsite.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'denknll25063av',
-        'USER': 'jgiezgourieazh',
-        'PASSWORD': '919ab2bc8abc6e1a17687fc54b997c5d2a64fdb7373410b3c25bd07fc3dfa4c5',
-        'HOST': 'ec2-3-92-151-217.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -138,6 +134,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static' / 'admin',
+    BASE_DIR / '_redirects'
 ]
 STATIC_ROOT = BASE_DIR / 'static'
 
