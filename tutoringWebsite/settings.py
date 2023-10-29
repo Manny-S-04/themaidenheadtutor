@@ -87,12 +87,8 @@ WSGI_APPLICATION = 'tutoringWebsite.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dv3c4qfq076tc',
-        'USER': 'txzdrmcxdccgru',
-        'PASSWORD': '78bd00742c35018ef62a4cd05b6619e5d9adf951d6ad3e5204d5ba55947c116d',
-        'HOST': 'ec2-3-92-151-217.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
